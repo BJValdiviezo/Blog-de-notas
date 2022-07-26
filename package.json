@@ -1,0 +1,21 @@
+{
+  "name": "blogdetareas",
+  "version": "1.0.0",
+  "description": "Blog de Tareas",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BJValdiviezo/Blog-de-notas.git"
+  },
+  "author": "Bjvaldiviezo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BJValdiviezo/Blog-de-notas/issues"
+  },
+  "homepage": "https://github.com/BJValdiviezo/Blog-de-notas#readme",
+  "type":"module"
+  
+}
