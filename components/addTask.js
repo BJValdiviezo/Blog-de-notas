@@ -12,7 +12,7 @@ export const addTask = (evento) => {
   const date = calendar.value;
   const dateFormat = moment(date).format('DD/MM/YYYY');
   
-  const taskList = JSON.parse(localStorage.getItem('tasks')) || [];
+ 
 
 
   input.value = '';
@@ -22,30 +22,31 @@ export const addTask = (evento) => {
     value,
     dateFormat
   }
-  taskList.push(taskObj);
+  
+  const taskList = JSON.parse(localStorage.getItem('tasks')) || [];
+  taskList.push({value,dateFormat});
   localStorage.setItem('tasks', JSON.stringify(taskList));
   
   const task = createTask(taskObj);
   list.appendChild(task);
 }
 
-const createTask = ({ value, dateFormat }) => {
-
+export const createTask = ({ value, dateFormat }) => {
   const task = document.createElement("li");
-  task.classList.add('card');
+        task.classList.add('card');
   //Backticks `` alt gr + }
   const taskContent = document.createElement("div");
-  console.log(value, dateFormat);
-
-  taskContent.appendChild(checkComplete());
+        
   const titleTask = document.createElement("span");
-  titleTask.classList.add("task");
-  titleTask.innerText = value
-  taskContent.appendChild(titleTask);
+        titleTask.classList.add("task");
+        titleTask.innerText = value;
+        taskContent.appendChild(checkComplete());
+        taskContent.appendChild(titleTask);
+
   const dateElement = document.createElement("span");
-  dateElement.innerHTML = dateFormat;
-  task.appendChild(taskContent);
-  task.appendChild(dateElement)
-  task.appendChild(deleteIcon());
+        dateElement.innerHTML = dateFormat;
+        task.appendChild(taskContent);
+        task.appendChild(dateElement)
+        task.appendChild(deleteIcon());
   return task;
 }
