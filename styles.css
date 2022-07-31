@@ -125,3 +125,19 @@ form {
 .noTasks {
   font-size: 48px;
 }
+<<<<<<< HEAD
+=======
+
+@media only screen and (max-width: 990px){
+  .inputForm{
+    width: 60%;
+    padding: 10px;
+    text-align: center;
+  }
+  form {
+    width: 100%;
+    flex-direction: column;
+    height: 100px;
+    justify-content: center;
+}
+>>>>>>> parent of ae0d0f5 (verificando responsividad)
