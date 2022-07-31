@@ -125,14 +125,18 @@ form {
 .noTasks {
   font-size: 48px;
 }
-<<<<<<< HEAD
-=======
-
+.date{
+  width: 100%;
+  padding: 15px;
+}
 @media only screen and (max-width: 990px){
   .inputForm{
     width: 60%;
     padding: 10px;
     text-align: center;
+  }
+  .mainCard{
+    width: 70%;
   }
   form {
     width: 100%;
@@ -140,4 +144,3 @@ form {
     height: 100px;
     justify-content: center;
 }
->>>>>>> parent of ae0d0f5 (verificando responsividad)
