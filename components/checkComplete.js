@@ -7,8 +7,9 @@ export const checkComplete = (id) => {
 const completeTask = (event, id) => {
     const element = event.target
     element.classList.toggle("fas");
-    element.classList.toggle("far");
     element.classList.toggle("completeIcon");
+    element.classList.toggle("far");
+    
     console.log('id check', id);
     const tasks = JSON.parse(localStorage.getItem("tasks"));
     const index = tasks.findIndex(item => item.id == id);

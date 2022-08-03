@@ -44,14 +44,20 @@ export const createTask = ({ value, dateFormat, complete , id }) => {
       const taskContent = document.createElement("div");
       const check = checkComplete(id);
       console.log(complete)
+      if(complete){
+            check.classList.toggle("fas");
+            check.classList.toggle("far");
             check.classList.toggle("completeIcon");
-      
+      }
       const titleTask = document.createElement("span");
       titleTask.classList.add("task");
       titleTask.innerText = value;
       taskContent.appendChild(check);
       taskContent.appendChild(titleTask);
+
+      const dateElement = document.createElement("span");
+      
       task.appendChild(taskContent);
-      task.appendChild(deleteIcon(id));
+      task.appendChild(deleteIcon());
       return task;
 }
