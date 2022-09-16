@@ -46,8 +46,9 @@ export const createTask = ({ value, dateFormat, complete , id }) => {
       console.log(complete)
       if(complete){
             check.classList.toggle("fas");
-            check.classList.toggle("far");
             check.classList.toggle("completeIcon");
+            check.classList.toggle("far");
+            
       }
       const titleTask = document.createElement("span");
       titleTask.classList.add("task");
